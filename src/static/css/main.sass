@@ -1,0 +1,223 @@
+$background-black: #0D0F10
+$white: rgba(255, 255, 255, 0.95)
+$line: 1px solid rgba(255, 255, 255, 0.11)
+$height-header: 80px
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0px
+	padding: 0px
+
+.header
+	top: 0
+	width: 100%
+	left: 0
+	z-index: 9
+	position: fixed
+	overflow: hidden
+	background: $background-black
+	height: $height-header
+	border-bottom: $line
+
+.header-container
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height:  inherit
+
+.header-container_left
+	display: flex
+
+.header-logo
+	width: 240px
+	display: flex
+	justify-content: center
+	
+
+.dropdown
+	width: 220px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.dropdown-button
+	cursor: pointer
+	background-color: transparent 
+	border: none
+	padding: 0
+
+.dropdown-button_text
+	color: $white	
+	font-weight: 600
+	font-size: 14px
+	margin-right: 10px
+	font-family: 'Work Sans', sans-serif
+
+    
+.header-container_right
+	display: flex    
+
+.navigation
+	width: 240px
+	display: flex
+	justify-content: center
+
+.call
+	margin-right: 60px
+	color: white
+	font-family: Work Sans
+	font-weight: 800
+	font-size: 14px
+	text-decoration: none
+	padding-left: 28px
+	line-height: 20px
+	background-repeat: no-repeat
+	background-position: center left
+	background-image: url(../img/call.svg)
+
+.navigation_button
+	font-family: Work Sans
+	font-weight: 800	
+	color: white
+	cursor: pointer
+	font-size: 14px
+	background-color: transparent 
+	border: none
+	padding: 0 0 0 40px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 28.5px
+		height: 2px
+		position: absolute
+		left: 0
+		top: 5px
+		border-radius: 33px
+		background-color: white
+	&:after
+		content: ''
+		display: block
+		width: 28.5px
+		height: 2px
+		position: absolute
+		left: 0
+		bottom: 5px
+		border-radius: 33px
+		background-color: white	
+
+.main
+	height: 100vh	
+	background: $background-black right center no-repeat  url(../img/bg.jpg)
+	padding-top: $height-header
+	position: relative 
+	background-size: contain
+	&:after
+		position: absolute
+		width: calc(100vh * 1.51)
+		content: ''
+		display: block
+		z-index: 5
+		right: 0
+		bottom: 0
+		height: 100%
+		background-image: linear-gradient(55.65deg, #0D100F 0%, #0D1010 0.01%, rgba(13, 16, 15, 0) 54.27%)
+
+
+.main-container
+	display: flex
+	justify-content: space-between;
+	align-items: center
+	height: 100%
+	&:before
+		content: ''
+		width: 1px
+		height: 100vh
+		display: block
+		position: absolute
+		top: 0
+		left: 240px
+		z-index: 10
+		background-color: rgba(255, 255, 255, 0.11)
+	&:after
+		content: ''
+		width: 1px
+		height: 100vh
+		display: block
+		z-index: 10
+		position: absolute
+		top: 0
+		right: 240px
+		background-color: rgba(255, 255, 255, 0.11)	
+
+.main-text
+	position: relative
+	z-index: 9
+	margin-left: 240px
+	&:after
+		content: ''
+		width: 100vw
+		height: 1px
+		display: block
+		z-index: 10
+		position: absolute
+		bottom: 0
+		left: -240px
+		background-color: rgba(255, 255, 255, 0.11)	
+
+.main-text_title
+	font-family: Work Sans
+	font-style: normal
+	font-weight: 900
+	font-size: 66px
+	line-height: 66px
+	color: white
+	margin: 0
+	width: 492px
+	span
+		display: block
+		color: black
+		-webkit-text-stroke: 1px white
+
+.main-text_content
+	font-family: Work Sans
+	font-weight: 400
+	color: white
+	font-size: 15px
+	margin-top: 30px
+	margin-bottom: 60px		
+
+.main-text_button
+	height: 52px
+	width: 132px	
+	box-shadow: 0px 7px 64px rgba(241, 0, 72, 0.66)
+	background: #F10048
+	border: none
+	color: white
+	font-size: 17px
+	font-weight: 600
+	font-family: Work Sans
+
+.list-social
+	display: flex
+	top: calc((100% - 442px) + (46px * 2) + 12px)
+	position: absolute
+	right: 97px
+	flex-direction: column
+
+.list-social_item
+	width: 46px
+	border-radius: 100%
+	margin-top: 12px
+	height: 46px
+	display: flex
+	cursor: pointer
+	justify-content: center
+	align-items: center
+	border: $line
+	backdrop-filter: blur(88px)
+	position: relative
+	z-index: 99
+	background: rgba(13, 16, 16, 0.46)
